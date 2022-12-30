@@ -5260,7 +5260,7 @@ local window =
     {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Krahub", color = Color3.fromRGB(224, 67, 67)}
 )
 
-wait(1.5)
+wait(1)
 -- // Tabs \\ --
 local Main = window:page({name = "Main"})
 local MainL = Main:section({name = "General", side = "left", size = 300})
@@ -5271,7 +5271,7 @@ local Items = window:page({name = "Items"})
 local ItemL = Items:section({name = "Automatically", side = "left", size = 325})
 local ItemR = Items:section({name = "Fighting style", side = "right", size = 200})
 
-local Raid = window:page({name = "Dungeons"})
+local Dungeons = window:page({name = "Dungeons"})
 local RaidL = Dungeons:section({name = "Raids", side = "left", size = 150})
 local RaidR = Dungeons:section({name = "Esp", side = "right", size = 125})
 local RaidL = Dungeons:section({name = "Fruits", side = "left", size = 100})
