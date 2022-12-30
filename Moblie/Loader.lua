@@ -5262,24 +5262,26 @@ local window =
 wait(1.5)
 -- // Tabs \\ --
 local Main = window:page({name = "Main"})
-local MainL = Main:section({name = "General", side = "left", size = 100})
-local MainR = Main:section({name = "Stats/Settings", side = "right", size = 200})
+local MainL = Main:section({name = "General", side = "left", size = 300})
+local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
+local MainL = Main:section({name = "Stats", side = "left, size = 100 })
 
 local Items = window:page({name = "Items"})
-local ItemL = Main:section({name = "Automatically", side = "left", size = 325})
-local ItemR = Main:section({name = "Fighting style", side = "right", size = 200})
+local ItemL = Items:section({name = "Automatically", side = "left", size = 325})
+local ItemR = Items:section({name = "Fighting style", side = "right", size = 200})
 
 local Raid = window:page({name = "Dungeons"})
-local RaidL = Main:section({name = "Raids", side = "left", size = 150})
-local RaidR = Main:section({name = "Esp", side = "right", size = 125})
+local RaidL = Dungeons:section({name = "Raids", side = "left", size = 150})
+local RaidR = Dungeons:section({name = "Esp", side = "right", size = 125})
+local RaidL = Dungeons:section({name = "Fruits", side = "left", size = 100})
 
 local Misc = window:page({name = "Misc"})
-local MiscL = Main:section({name = "Misc", side = "left", size = 250})
-local MiscR = Main:section({name = "Fruits", side = "right", size = 175})
+local MiscL = Misc:section({name = "Misc", side = "left", size = 250})
+local MiscR = Misc:section({name = "Other", side = "right", size = 175})
 
 local Setting = window:page({name = "Settings"})
-local SettingL = Main:section({name = "Settings gui", side = "left", size = 175})
-local SettingR = Main:section({name = "Other", side = "right", size = 200})
+local SettingL = Setting:section({name = "Settings gui", side = "left", size = 175})
+local SettingR = Setting:section({name = "Other", side = "right", size = 200})
 
 
 
