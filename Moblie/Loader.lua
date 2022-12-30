@@ -5254,9 +5254,10 @@ end
 
 -- // Window \\ --
 
+
 local window =
     library:new(
-    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Krahub | ..Date", color = Color3.fromRGB(224, 67, 67)}
+    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Krahub", color = Color3.fromRGB(224, 67, 67)}
 )
 
 wait(1.5)
@@ -5264,7 +5265,7 @@ wait(1.5)
 local Main = window:page({name = "Main"})
 local MainL = Main:section({name = "General", side = "left", size = 300})
 local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
-local MainL = Main:section({name = "Stats", side = "left, size = 100 })
+local MainL = Main:section({name = "Stats", side = "left", size = 100 })
 
 local Items = window:page({name = "Items"})
 local ItemL = Items:section({name = "Automatically", side = "left", size = 325})
@@ -5279,9 +5280,9 @@ local Misc = window:page({name = "Misc"})
 local MiscL = Misc:section({name = "Misc", side = "left", size = 250})
 local MiscR = Misc:section({name = "Other", side = "right", size = 175})
 
-local Setting = window:page({name = "Settings"})
-local SettingL = Setting:section({name = "Settings gui", side = "left", size = 175})
-local SettingR = Setting:section({name = "Other", side = "right", size = 200})
+local Settings = window:page({name = "Settings"})
+local SettingL = Settings:section({name = "Settings gui", side = "left", size = 175})
+local SettingR = Settings:section({name = "Other", side = "right", size = 200})
 
 
 
