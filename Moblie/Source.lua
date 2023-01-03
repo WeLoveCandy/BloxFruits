@@ -1,9 +1,9 @@
 
 
 _G.AutoFarm_Level = true
-_G.FastAttack = false
+_G.FastAttack = true
 
-loadstring(game:HttpGet("https://pastebin.com/raw/zbCDbUGF))()
+loadstring(game:HttpGet("https://pastebin.com/raw/zbCDbUGF"))()
 
 function checklevel()
     local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
