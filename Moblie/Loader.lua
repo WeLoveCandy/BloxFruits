@@ -5262,8 +5262,9 @@ local Combat = window:page({name = "Combat"})
 local Visual = window:page({name = "Visual"})
 local Settings = window:page({name = "Settings"})
 
-local MainL = Main:section({name = "General", side = "left", size = 450})
-
+local MainL = Main:section({name = "General", side = "left", size = 75})
+local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
+local MainL = Main:section({name = "Stats", side = "left", size = 120})
 
 MainL:toggle(
     {
@@ -5293,9 +5294,9 @@ MainL:toggle(
     }
 )
 
-MainL:toggle(
+MainR:toggle(
     {
-        name = "Auto equiq",
+        name = "Auto select weapon",
         def = false,
         callback = function(vu)
             if vu == true then
@@ -5307,13 +5308,124 @@ MainL:toggle(
     }
 )
 
-MainL:dropdown(
+MainR:dropdown(
     {
         name = "Select weapon:",
         def = "",
         max = 10,
         options = {"Fighting style", "Sword","Gun","Fruit"},
         callback = function(vu)
+            print(vu)
+        end
+    }
+)
+
+MainR:toggle(
+    {
+        name = "Fast attack",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainR:toggle(
+    {
+        name = "Ultimate fast attack",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:toggle(
+    {
+        name = "Melee",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:toggle(
+    {
+        name = "Health",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:toggle(
+    {
+        name = "Sword",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+MainL:toggle(
+    {
+        name = "Gun",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+
+MainL:toggle(
+    {
+        name = "Blox fruit",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+MainA:slider(
+    {
+        name = "Point",
+        Default = 10,
+        Minimum = -10,
+        Maximum = 100,
+        Decimals = 10,
+        Suffix = "%",
+        Callback = function(vu)
             print(vu)
         end
     }
