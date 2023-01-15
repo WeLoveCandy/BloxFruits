@@ -5251,39 +5251,72 @@ function sections:configloader(props)
     return configloader
 end
 
-
--- // Window \\ --
-
-
 local window =
     library:new(
-    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Krahub", color = Color3.fromRGB(224, 67, 67)}
+    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Candy hub", color = Color3.fromRGB(255, 255, 255)}
 )
 
-wait(1)
--- // Tabs \\ --
 local Main = window:page({name = "Main"})
-local MainL = Main:section({name = "General", side = "left", size = 300})
-local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
-local MainL = Main:section({name = "Stats", side = "left", size = 100 })
-
-local Items = window:page({name = "Items"})
-local ItemL = Items:section({name = "Automatically", side = "left", size = 325})
-local ItemR = Items:section({name = "Fighting style", side = "right", size = 200})
-
-local Dungeons = window:page({name = "Dungeons"})
-local RaidL = Dungeons:section({name = "Raids", side = "left", size = 150})
-local RaidR = Dungeons:section({name = "Esp", side = "right", size = 125})
-local RaidL = Dungeons:section({name = "Fruits", side = "left", size = 100})
-
-local Misc = window:page({name = "Misc"})
-local MiscL = Misc:section({name = "Misc", side = "left", size = 250})
-local MiscR = Misc:section({name = "Other", side = "right", size = 175})
-
+local Automatic = window:page({name = "Automatic"})
+local Combat = window:page({name = "Combat"})
+local Visual = window:page({name = "Visual"})
 local Settings = window:page({name = "Settings"})
-local SettingL = Settings:section({name = "Settings gui", side = "left", size = 175})
-local SettingR = Settings:section({name = "Other", side = "right", size = 200})
+
+local MainL = Main:section({name = "General", side = "left", size = 450})
 
 
+MainL:toggle(
+    {
+        name = "Automatic farm",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:toggle(
+    {
+        name = "Automatic farm nearest",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:toggle(
+    {
+        name = "Auto equiq",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+MainL:dropdown(
+    {
+        name = "Select weapon:",
+        def = "",
+        max = 10,
+        options = {"Fighting style", "Sword","Gun","Fruit"},
+        callback = function(vu)
+            print(vu)
+        end
+    }
+)
 
 return library
