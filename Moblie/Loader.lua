@@ -5253,7 +5253,7 @@ end
 
 local window =
     library:new(
-    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Candy hub", color = Color3.fromRGB(255, 255, 255)}
+    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Candy hub | Next generation", color = Color3.fromRGB(255, 46, 31)}
 )
 
 local Main = window:page({name = "Main"})
@@ -5264,7 +5264,8 @@ local Settings = window:page({name = "Settings"})
 
 local MainL = Main:section({name = "General", side = "left", size = 75})
 local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
-local MainL = Main:section({name = "Stats", side = "left", size = 120})
+local MainUL = Main:section({name = "Stats", side = "left", size = 120})
+
 
 MainL:toggle(
     {
@@ -5293,6 +5294,21 @@ MainL:toggle(
         end
     }
 )
+
+MainL:toggle(
+    {
+        name = "Automatically chest",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
 
 MainR:toggle(
     {
@@ -5348,7 +5364,7 @@ MainR:toggle(
     }
 )
 
-MainL:toggle(
+MainUL:toggle(
     {
         name = "Melee",
         def = false,
@@ -5362,7 +5378,7 @@ MainL:toggle(
     }
 )
 
-MainL:toggle(
+MainUL:toggle(
     {
         name = "Health",
         def = false,
@@ -5376,7 +5392,7 @@ MainL:toggle(
     }
 )
 
-MainL:toggle(
+MainUL:toggle(
     {
         name = "Sword",
         def = false,
@@ -5389,7 +5405,7 @@ MainL:toggle(
         end
     }
 )
-MainL:toggle(
+MainUL:toggle(
     {
         name = "Gun",
         def = false,
@@ -5404,7 +5420,7 @@ MainL:toggle(
 )
 
 
-MainL:toggle(
+MainUL:toggle(
     {
         name = "Blox fruit",
         def = false,
@@ -5417,14 +5433,14 @@ MainL:toggle(
         end
     }
 )
-MainA:slider(
+MainUL:slider(
     {
         name = "Point",
-        Default = 10,
-        Minimum = -10,
+        Default = 1,
+        Minimum = 1,
         Maximum = 100,
         Decimals = 10,
-        Suffix = "%",
+        Suffix = "Point",
         Callback = function(vu)
             print(vu)
         end
