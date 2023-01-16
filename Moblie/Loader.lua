@@ -5327,6 +5327,36 @@ Main1:toggle(
     }
 )
 
+Main1:toggle(
+    {
+        name = "Automatic chest",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+Main1:toggle(
+    {
+        name = "Automatic new world",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+
+
 Main2:dropdown(
     {
         name = "Select weapon:",
@@ -5383,6 +5413,102 @@ Main2:toggle(
         end
     }
 )
+Main2:toggle(
+    {
+        name = "Auto skill z",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+Main2:toggle(
+    {
+        name = "Auto skill x",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+Main2:toggle(
+    {
+        name = "Auto skill c",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+Main2:toggle(
+    {
+        name = "Auto skill v",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+Main2:toggle(
+    {
+        name = "Auto skill f",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+Main2:slider(
+    {
+        name = "Level lock",
+        Default = 2450,
+        Minimum = 1,
+        Maximum = 2450,
+        Decimals = 10,
+        Suffix = "",
+        Callback = function(vu)
+            print(vu)
+        end
+    }
+)
+Main2:toggle(
+    {
+        name = "Auto lock level",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+
+
+
+
 
 Main3:toggle(
     {
@@ -5466,5 +5592,7 @@ Main3:slider(
         end
     }
 )
+
+
 
 return library
