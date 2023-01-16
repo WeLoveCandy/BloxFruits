@@ -5256,18 +5256,21 @@ local window =
     {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Candy hub | Next generation", color = Color3.fromRGB(255, 46, 31)}
 )
 
+-- Tabs
 local Main = window:page({name = "Main"})
 local Automatic = window:page({name = "Automatic"})
 local Combat = window:page({name = "Combat"})
 local Visual = window:page({name = "Visual"})
 local Settings = window:page({name = "Settings"})
 
-local MainL = Main:section({name = "General", side = "left", size = 75})
-local MainR = Main:section({name = "Settings farm", side = "right", size = 200})
-local MainUL = Main:section({name = "Stats", side = "left", size = 120})
+-- Page
+local Main1 = Main:section({name = "\\ General //", side = "left", size = 135})
+local Main2 = Main:section({name = "\\ Settings //", side = "right", size = 325})
+local Main3 = Main:section({name = "\\ Stats point //", side = "right", size = 125})
+local Main4 = Main:section({name = "\\ Bosses //", side = "left", size = 300})
+local Main5 = Main:section({name = "\\ Metrical //", side = "left", size = 175})
 
-
-MainL:toggle(
+Main1:toggle(
     {
         name = "Automatic farm",
         def = false,
@@ -5281,7 +5284,21 @@ MainL:toggle(
     }
 )
 
-MainL:toggle(
+Main1:toggle(
+    {
+        name = "Automatic farm quest",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+Main1:toggle(
     {
         name = "Automatic farm nearest",
         def = false,
@@ -5295,9 +5312,10 @@ MainL:toggle(
     }
 )
 
-MainL:toggle(
+
+Main1:toggle(
     {
-        name = "Automatically chest",
+        name = "Automatic factory",
         def = false,
         callback = function(vu)
             if vu == true then
@@ -5309,22 +5327,7 @@ MainL:toggle(
     }
 )
 
-
-MainR:toggle(
-    {
-        name = "Auto select weapon",
-        def = false,
-        callback = function(vu)
-            if vu == true then
-                print("True")
-            else
-                print("False")
-            end
-        end
-    }
-)
-
-MainR:dropdown(
+Main2:dropdown(
     {
         name = "Select weapon:",
         def = "",
@@ -5336,7 +5339,24 @@ MainR:dropdown(
     }
 )
 
-MainR:toggle(
+Main2:toggle(
+    {
+        name = "Automatic select weapon",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
+
+
+
+
+Main2:toggle(
     {
         name = "Fast attack",
         def = false,
@@ -5350,7 +5370,7 @@ MainR:toggle(
     }
 )
 
-MainR:toggle(
+Main2:toggle(
     {
         name = "Ultimate fast attack",
         def = false,
@@ -5364,7 +5384,7 @@ MainR:toggle(
     }
 )
 
-MainUL:toggle(
+Main3:toggle(
     {
         name = "Melee",
         def = false,
@@ -5378,7 +5398,7 @@ MainUL:toggle(
     }
 )
 
-MainUL:toggle(
+Main3:toggle(
     {
         name = "Health",
         def = false,
@@ -5392,7 +5412,7 @@ MainUL:toggle(
     }
 )
 
-MainUL:toggle(
+Main3:toggle(
     {
         name = "Sword",
         def = false,
@@ -5405,7 +5425,7 @@ MainUL:toggle(
         end
     }
 )
-MainUL:toggle(
+Main3:toggle(
     {
         name = "Gun",
         def = false,
@@ -5420,7 +5440,7 @@ MainUL:toggle(
 )
 
 
-MainUL:toggle(
+Main3:toggle(
     {
         name = "Blox fruit",
         def = false,
@@ -5433,14 +5453,14 @@ MainUL:toggle(
         end
     }
 )
-MainUL:slider(
+Main3:slider(
     {
         name = "Point",
         Default = 1,
         Minimum = 1,
         Maximum = 100,
         Decimals = 10,
-        Suffix = "Point",
+        Suffix = "Points",
         Callback = function(vu)
             print(vu)
         end
